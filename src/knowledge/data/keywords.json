@@ -1,0 +1,357 @@
+{
+  "version": "0.1.0",
+  "active": [
+    {
+      "spelling": "என்றால்",
+      "token": "IF",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "இல்லை",
+      "token": "ELSE",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "நிறுத்து",
+      "token": "BREAK",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "தொடர்",
+      "token": "CONTINUE",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "ஒவ்வொரு",
+      "token": "FOR",
+      "status": "keyword",
+      "category": "loop"
+    },
+    {
+      "spelling": "செயல்",
+      "token": "FUNCTION",
+      "status": "keyword",
+      "category": "declaration"
+    },
+    {
+      "spelling": "கொடு",
+      "token": "RETURN",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "வகுப்பு",
+      "token": "CLASS",
+      "status": "keyword",
+      "category": "declaration"
+    },
+    {
+      "spelling": "உருவாக்கு",
+      "token": "CONSTRUCTOR",
+      "status": "keyword",
+      "category": "member"
+    },
+    {
+      "spelling": "இது",
+      "token": "THIS",
+      "status": "keyword",
+      "category": "value"
+    },
+    {
+      "spelling": "மேல்",
+      "token": "SUPER",
+      "status": "keyword",
+      "category": "value"
+    },
+    {
+      "spelling": "சேர்தல்",
+      "token": "EXTENDS",
+      "status": "keyword",
+      "category": "class"
+    },
+    {
+      "spelling": "நிலையான",
+      "token": "CONST",
+      "status": "keyword",
+      "category": "declaration"
+    },
+    {
+      "spelling": "மாறி",
+      "token": "LET",
+      "status": "keyword",
+      "category": "declaration"
+    },
+    {
+      "spelling": "மாற்றி",
+      "token": "VAR",
+      "status": "keyword",
+      "category": "declaration"
+    },
+    {
+      "spelling": "இருக்கும்வரை",
+      "token": "WHILE",
+      "status": "keyword",
+      "category": "loop"
+    },
+    {
+      "spelling": "செய்",
+      "token": "DO",
+      "status": "keyword",
+      "category": "loop"
+    },
+    {
+      "spelling": "தேர்ந்தெடு",
+      "token": "SWITCH",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "நிலை",
+      "token": "CASE",
+      "status": "keyword",
+      "category": "switch"
+    },
+    {
+      "spelling": "இயல்புநிலை",
+      "token": "DEFAULT",
+      "status": "keyword",
+      "category": "switch"
+    },
+    {
+      "spelling": "முயற்சி",
+      "token": "TRY",
+      "status": "keyword",
+      "category": "error"
+    },
+    {
+      "spelling": "பிடி",
+      "token": "CATCH",
+      "status": "keyword",
+      "category": "error"
+    },
+    {
+      "spelling": "இறுதியில்",
+      "token": "FINALLY",
+      "status": "keyword",
+      "category": "error"
+    },
+    {
+      "spelling": "எறி",
+      "token": "THROW",
+      "status": "keyword",
+      "category": "error"
+    },
+    {
+      "spelling": "புதிய",
+      "token": "NEW",
+      "status": "keyword",
+      "category": "operator"
+    },
+    {
+      "spelling": "நீக்கு",
+      "token": "DELETE",
+      "status": "keyword",
+      "category": "operator"
+    },
+    {
+      "spelling": "வகை",
+      "token": "TYPEOF",
+      "status": "keyword",
+      "category": "operator"
+    },
+    {
+      "spelling": "உதாரணம்",
+      "token": "INSTANCEOF",
+      "status": "keyword",
+      "category": "operator"
+    },
+    {
+      "spelling": "உள்ளே",
+      "token": "IN",
+      "status": "keyword",
+      "category": "operator"
+    },
+    {
+      "spelling": "வெற்று",
+      "token": "VOID",
+      "status": "keyword",
+      "category": "operator"
+    },
+    {
+      "spelling": "ஒத்திசைவற்ற",
+      "token": "ASYNC",
+      "status": "keyword",
+      "category": "async"
+    },
+    {
+      "spelling": "காத்திரு",
+      "token": "AWAIT",
+      "status": "keyword",
+      "category": "async"
+    },
+    {
+      "spelling": "வழங்கு",
+      "token": "YIELD",
+      "status": "keyword",
+      "category": "generator"
+    },
+    {
+      "spelling": "இறக்குமதி",
+      "token": "IMPORT",
+      "status": "keyword",
+      "category": "module"
+    },
+    {
+      "spelling": "ஏற்றுமதி",
+      "token": "EXPORT",
+      "status": "keyword",
+      "category": "module"
+    },
+    {
+      "spelling": "இருந்து",
+      "token": "FROM",
+      "status": "keyword",
+      "category": "module"
+    },
+    {
+      "spelling": "ஆக",
+      "token": "AS",
+      "status": "keyword",
+      "category": "module"
+    },
+    {
+      "spelling": "உடன்",
+      "token": "WITH",
+      "status": "keyword",
+      "category": "control"
+    },
+    {
+      "spelling": "பிழைத்திருத்து",
+      "token": "DEBUGGER",
+      "status": "keyword",
+      "category": "statement"
+    },
+    {
+      "spelling": "நிலையியல்",
+      "token": "STATIC",
+      "status": "keyword",
+      "category": "class"
+    }
+  ],
+  "inactive": [
+    {
+      "spelling": "செயல்படுத்து",
+      "token": null,
+      "status": "reserved",
+      "category": "class"
+    },
+    {
+      "spelling": "பொது",
+      "token": null,
+      "status": "reserved",
+      "category": "modifier"
+    },
+    {
+      "spelling": "தனி",
+      "token": null,
+      "status": "reserved",
+      "category": "modifier"
+    },
+    {
+      "spelling": "இடைமுகம்",
+      "token": null,
+      "status": "reserved",
+      "category": "type-declaration"
+    },
+    {
+      "spelling": "எண்ணகம்",
+      "token": null,
+      "status": "reserved",
+      "category": "type-declaration"
+    },
+    {
+      "spelling": "எண்",
+      "token": null,
+      "status": "identifier",
+      "category": "helper-name"
+    },
+    {
+      "spelling": "சொல்",
+      "token": null,
+      "status": "identifier",
+      "category": "helper-name"
+    },
+    {
+      "spelling": "தொகுப்பு",
+      "token": null,
+      "status": "reserved",
+      "category": "module"
+    },
+    {
+      "spelling": "சேர்",
+      "token": null,
+      "status": "identifier",
+      "category": "helper-name"
+    },
+    {
+      "spelling": "நீளம்",
+      "token": null,
+      "status": "identifier",
+      "category": "helper-name"
+    }
+  ],
+  "activeSpellings": [
+    "என்றால்",
+    "இல்லை",
+    "நிறுத்து",
+    "தொடர்",
+    "ஒவ்வொரு",
+    "செயல்",
+    "கொடு",
+    "வகுப்பு",
+    "உருவாக்கு",
+    "இது",
+    "மேல்",
+    "சேர்தல்",
+    "நிலையான",
+    "மாறி",
+    "மாற்றி",
+    "இருக்கும்வரை",
+    "செய்",
+    "தேர்ந்தெடு",
+    "நிலை",
+    "இயல்புநிலை",
+    "முயற்சி",
+    "பிடி",
+    "இறுதியில்",
+    "எறி",
+    "புதிய",
+    "நீக்கு",
+    "வகை",
+    "உதாரணம்",
+    "உள்ளே",
+    "வெற்று",
+    "ஒத்திசைவற்ற",
+    "காத்திரு",
+    "வழங்கு",
+    "இறக்குமதி",
+    "ஏற்றுமதி",
+    "இருந்து",
+    "ஆக",
+    "உடன்",
+    "பிழைத்திருத்து",
+    "நிலையியல்"
+  ],
+  "counts": {
+    "total": 50,
+    "active": 40,
+    "reserved": 6,
+    "identifier": 4,
+    "standardGlobals": 85,
+    "apiGlobals": 79
+  }
+}

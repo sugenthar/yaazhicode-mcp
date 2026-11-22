@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "yaazhicode": {
+      "command": "node",
+      "args": ["D:\\YaazhiCode\\YaazhiCode MCP\\dist\\transports\\cli.js", "--stdio"],
+      "disabled": false,
+      "autoApprove": ["get_yaazhicode_overview", "list_yaazhicode_keywords", "validate_yaazhicode_code"]
+    }
+  }
+}

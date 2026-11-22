@@ -1,0 +1,661 @@
+{
+  "version": "0.1.0",
+  "note": "Codes are extracted from the YaazhiCode 0.1.0 source. For the authoritative Tamil message, reason, suggestion, and example, validate the actual code with the compiler rather than relying on these short labels.",
+  "codes": [
+    {
+      "code": "YAAZHICODE_ARGUMENT_COUNT",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ARGUMENT_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ARGUMENT_TYPE",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ASCII_NUMBER",
+      "category": "lexical",
+      "shortExplanation": "ASCII இலக்கங்கள் (0-9) YaazhiCode மூலத்தில் எண் மதிப்புகளாக ஏற்கப்படுவதில்லை. 201 என்பதற்குப் பதிலாக $௨௦௧ என எழுதவும்."
+    },
+    {
+      "code": "YAAZHICODE_ASSERTION_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ASYNC_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ASYNC_IN_SYNC_CONTEXT",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ASYNC_MODULE",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ASYNC_REQUIRED",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_AWAIT_OUTSIDE_ASYNC",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_BAD_NUMERAL",
+      "category": "lexical",
+      "shortExplanation": "$ குறிக்குப் பிறகு சரியான தமிழ் இலக்கங்கள் தேவை; தசமத்தில் இரு புறமும் இலக்கம் இருக்க வேண்டும்."
+    },
+    {
+      "code": "YAAZHICODE_BARE_TAMIL_DIGIT",
+      "category": "lexical",
+      "shortExplanation": "தமிழ் இலக்கங்களை எண் மதிப்பாகப் பயன்படுத்த $ குறி தேவை; உதாரணம் $௧௨."
+    },
+    {
+      "code": "YAAZHICODE_BREAK_OUTSIDE_LOOP",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_BUFFER_ENCODING",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_BUFFER_ERROR",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CAPABILITY_DENIED",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_API_UNKNOWN",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_ARGUMENT",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_DIRECTORY",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_EXTENSION",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_FILE_NOT_FOUND",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_MISSING_FILE",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_OPTION",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_UNKNOWN_COMMAND",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CLI_WRITE_ERROR",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CONST_REASSIGNMENT",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CONTINUE_OUTSIDE_LOOP",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CONVERSION_ERROR",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_CRYPTO_ALGORITHM",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DATE_ERROR",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DIVISION_BY_ZERO",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DUPLICATE_CLASS_MEMBER",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DUPLICATE_CONSTRUCTOR",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DUPLICATE_DECLARATION",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DUPLICATE_DEFAULT",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DUPLICATE_EXPORT",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_DUPLICATE_PARAMETER",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_FILE_ENCODING",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_FILE_ERROR",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_FORMAT_DIFF",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_FS_INVALID_PATH",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_FS_PATH_DENIED",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_IDE_NOT_INSTALLED",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_IDE_PROJECT_NOT_FOUND",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INCOMPLETE_INPUT",
+      "category": "syntax",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INDEX_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INIT_EXISTS",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INIT_NAME",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INIT_PATH",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INIT_TEMPLATE",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INIT_WRITE",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INTERNAL_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INVALID_CONSTRUCTOR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INVALID_DELETE",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_INVALID_ESCAPE",
+      "category": "lexical",
+      "shortExplanation": "சரங்களில் \\\\, \\\", \\n, \\r, \\t மட்டுமே அனுமதிக்கப்படும்."
+    },
+    {
+      "code": "YAAZHICODE_INVALID_SUPER_CALL",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_JSON_ERROR",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MIGRATE_DIRECTORY",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_CIRCULAR",
+      "category": "module",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_EXPORT_NOT_FOUND",
+      "category": "module",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_EXTENSION",
+      "category": "syntax",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_NOT_FOUND",
+      "category": "module",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_PATH_DENIED",
+      "category": "module",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_READ_ERROR",
+      "category": "module",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_MODULE_SPECIFIER",
+      "category": "syntax",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NETWORK_ENDED",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NETWORK_HEADER",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NETWORK_HOST_DENIED",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NETWORK_SCHEME",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NETWORK_STATE",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NETWORK_URL",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NOT_A_CLASS",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NOT_CALLABLE",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NULL_ACCESS",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_NUMBER_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PACKAGE_ROOT",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_ENTRY_ESCAPE",
+      "category": "lexical",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_ENTRY_EXTENSION",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_ENTRY_MISSING",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_ENTRY_NOT_FILE",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_ENTRY_NOT_FOUND",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_INVALID_JSON",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_NOT_FOUND",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_PUBLIC_DIR_EMPTY",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_PUBLIC_DIR_ESCAPE",
+      "category": "lexical",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_SERVER_HOST",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_SERVER_PORT",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_SERVER_STATIC",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_SERVER_TYPE",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_CONFIG_TYPE",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROJECT_ENTRY_NOT_FOUND",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROMISE_NOT_REJECTED",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROMISE_PENDING",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_PROMISE_REJECTED",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_RANGE_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_READER_CLOSED",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_READONLY_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_REPL_ERROR",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_RETURN_OUTSIDE_FUNCTION",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ROUTE_METHOD",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_ROUTE_PATH",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_SEMANTIC_ERROR",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_SHUTDOWN",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_STACK_OVERFLOW",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_STATIC_DIRECTORY",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_STATIC_DIRECTORY_ESCAPE",
+      "category": "lexical",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_SUPER_OUTSIDE_CLASS",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_SYNTAX_ERROR",
+      "category": "syntax",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_TEST_EXIT",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_TEST_FAILED",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_TEST_FILE_ERROR",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_TEST_NOT_FOUND",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_THIS_OUTSIDE_FUNCTION",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_TIMER_ERROR",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_TYPE_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNCAUGHT_THROW",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNDEFINED_IDENTIFIER",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNEXPECTED_CHARACTER",
+      "category": "lexical",
+      "shortExplanation": "YaazhiCode மூலத்தில் தமிழ் எழுத்துகள், _, $, சரங்கள், குறியீடுகள் மட்டுமே அனுமதிக்கப்படுகின்றன."
+    },
+    {
+      "code": "YAAZHICODE_UNKNOWN_EXPORT",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNKNOWN_MEMBER",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNKNOWN_MODULE_MEMBER",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNSUPPORTED_GENERATOR",
+      "category": "semantic",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_UNTERMINATED_COMMENT",
+      "category": "lexical",
+      "shortExplanation": "/* உடன் தொடங்கிய விளக்கம் */ உடன் மூடப்படவில்லை."
+    },
+    {
+      "code": "YAAZHICODE_UNTERMINATED_STRING",
+      "category": "lexical",
+      "shortExplanation": "இரட்டை மேற்கோளுடன் தொடங்கிய சர் மூடப்படவில்லை."
+    },
+    {
+      "code": "YAAZHICODE_URL_ERROR",
+      "category": "standard-library",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_USER_ERROR",
+      "category": "runtime",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_VERSION",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_WATCH_ERROR",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_WATCH_SPAWN",
+      "category": "cli",
+      "shortExplanation": null
+    },
+    {
+      "code": "YAAZHICODE_YIELD_OUTSIDE_GENERATOR",
+      "category": "semantic",
+      "shortExplanation": null
+    }
+  ]
+}

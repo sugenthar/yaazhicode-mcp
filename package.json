@@ -1,0 +1,75 @@
+{
+  "name": "@yaazhicode/mcp",
+  "version": "0.1.0",
+  "description": "Official MCP server that gives compatible AI assistants verified YaazhiCode language knowledge, examples, validation and diagnostics.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/create-server.d.ts",
+      "import": "./dist/server/create-server.js"
+    }
+  },
+  "bin": {
+    "yaazhicode-mcp": "dist/transports/cli.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "node --import tsx --test \"tests/unit/*.test.ts\"",
+    "test:integration": "node --import tsx --test \"tests/integration/*.test.ts\"",
+    "start": "node dist/transports/cli.js --stdio",
+    "start:stdio": "node dist/transports/cli.js --stdio",
+    "start:http": "node dist/transports/cli.js --http",
+    "sync:knowledge": "node scripts/sync-knowledge.mjs",
+    "check:knowledge": "node scripts/sync-knowledge.mjs --check",
+    "verify:examples": "node scripts/verify-examples.mjs"
+  },
+  "keywords": [
+    "yaazhicode",
+    "mcp",
+    "tamil",
+    "programming-language",
+    "model-context-protocol"
+  ],
+  "author": "YaazhiCode language project",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sugenthar/yaazhiCode.git",
+    "directory": "YaazhiCode MCP"
+  },
+  "homepage": "https://github.com/sugenthar/yaazhiCode",
+  "bugs": {
+    "url": "https://github.com/sugenthar/yaazhiCode/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "yaazhicode": "0.1.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3"
+  }
+}

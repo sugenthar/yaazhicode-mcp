@@ -1,0 +1,2780 @@
+{
+  "version": "0.1.0",
+  "modules": [
+    {
+      "name": "கோப்பு",
+      "summary": "sandboxக்குள் கோப்பு மற்றும் கோப்பகச் செயல்பாடுகள்; பாதைக் கணக்கீடு இல்லை.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED",
+        "YAAZHICODE_FS_INVALID_PATH",
+        "YAAZHICODE_FS_PATH_DENIED",
+        "YAAZHICODE_FILE_ERROR",
+        "YAAZHICODE_FILE_ENCODING"
+      ],
+      "exports": [
+        {
+          "name": "படி",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "UTF-8 கோப்பைப் படிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "எழுது",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "உள்ளடக்கம்",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "கோப்பை மேலெழுதும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "சேர்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "உள்ளடக்கம்",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "கோப்பின் இறுதியில் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "உள்ளதா",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "boolean",
+            "async": false,
+            "summary": "பாதை உள்ளதா எனக் கூறும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கோப்பு_உள்ளதா",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "boolean",
+            "async": false,
+            "summary": "கோப்பு உள்ளதா எனக் கூறும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கோப்பகம்_உள்ளதா",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "boolean",
+            "async": false,
+            "summary": "கோப்பகம் உள்ளதா எனக் கூறும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "பட்டியல்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "array",
+            "async": false,
+            "summary": "கோப்பக உள்ளடக்கங்களைப் பட்டியலிடும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கோப்பகம்_உருவாக்கு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "கோப்பகத்தை உருவாக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கோப்பு_நீக்கு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "கோப்பு அல்லது கோப்பகத்தை நீக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தகவல்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "object",
+            "async": false,
+            "summary": "கோப்பு நிலைத் தகவலைப் படிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "பாதை",
+      "summary": "தளம் சார்ந்த பாதைக் கணக்கீடு மட்டும்; கோப்பு அணுகல் இல்லை.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "இணை",
+          "minArgs": 1,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பகுதிகள்",
+                "type": "string",
+                "rest": true
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "பாதைப் பகுதிகளை இணைக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தீர்மானி",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "முழுமையான பாதையாகத் தீர்மானிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அடிப்பெயர்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "கோப்பின் இறுதிப் பெயரைத் திருப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கோப்பகம்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "பாதையின் கோப்பகத்தைத் திருப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "நீட்டிப்பு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "கோப்பு நீட்டிப்பைத் திருப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "சீராக்கு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "பாதையைச் சீராக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "முழுமையானதா",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "boolean",
+            "async": false,
+            "summary": "பாதை முழுமையானதா எனக் கூறும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "ஒப்பீட்டு",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "இருந்து",
+                "type": "string"
+              },
+              {
+                "name": "இலக்கு",
+                "type": "string"
+              }
+            ],
+            "returns": "string",
+            "async": false,
+            "summary": "இரண்டு பாதைகளுக்கு இடையிலான ஒப்பீட்டுப் பாதையைத் திருப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "முகவரி",
+      "summary": "URL பிரித்தல், இணைத்தல், குறியாக்கம் மற்றும் வினவல் மாற்றம்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_URL_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "பிரி",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "தொகு",
+          "minArgs": 1,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "அளவுரு_பெறு",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "அளவுரு_சேர்",
+          "minArgs": 3,
+          "maxArgs": 3,
+          "signature": null
+        },
+        {
+          "name": "அளவுரு_நீக்கு",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "இடையகம்",
+      "summary": "இரும்பு எண்ணாக்கங்கள், UTF-8/Base64/Hex மாற்றங்கள்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_RANGE_ERROR",
+        "YAAZHICODE_BUFFER_ENCODING",
+        "YAAZHICODE_BUFFER_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "உரையிலிருந்து",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "பைட்டுகளிலிருந்து",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "நீளம்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "உரையாக்கு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "பைட்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "நகல்",
+          "minArgs": 1,
+          "maxArgs": 3,
+          "signature": null
+        },
+        {
+          "name": "ஒப்பிடு",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "சமம்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "பயன்பாடு",
+      "summary": "வகை ஆய்வு, உரை வடிவமைப்பு, சமநிலை மற்றும் பரிசோதனை.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "வகை_பெயர்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "உரை",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "தணிக்கை",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "சமம்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "வடிவமை",
+          "minArgs": 1,
+          "maxArgs": null,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "உறுதிப்படுத்து",
+      "summary": "சோதனை உறுதிப்படுத்தல்கள்; தோல்வியில் YaazhiCode பிழை.",
+      "errors": [
+        "YAAZHICODE_ASSERTION_ERROR",
+        "YAAZHICODE_TYPE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "சரிபார்",
+          "minArgs": 1,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "சமம்",
+          "minArgs": 2,
+          "maxArgs": 3,
+          "signature": null
+        },
+        {
+          "name": "சமமில்லை",
+          "minArgs": 2,
+          "maxArgs": 3,
+          "signature": null
+        },
+        {
+          "name": "வகை_சரிபார்",
+          "minArgs": 2,
+          "maxArgs": 3,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "நேரிகள்",
+      "summary": "ஒத்துழைப்பு நேரங்கள்; மறைமுக ஒத்திசைவற்ற இயக்கம் இல்லை.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED",
+        "YAAZHICODE_TIMER_ERROR",
+        "YAAZHICODE_ASYNC_IN_SYNC_CONTEXT"
+      ],
+      "exports": [
+        {
+          "name": "தாமதம்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "ரத்து",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "இயக்கு",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "உறுதி",
+      "summary": "வாக்குறுதி உருவாக்கம், காத்திருத்தல் மற்றும் நிலை ஆய்வு.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_RANGE_ERROR",
+        "YAAZHICODE_PROMISE_PENDING",
+        "YAAZHICODE_PROMISE_REJECTED",
+        "YAAZHICODE_PROMISE_NOT_REJECTED"
+      ],
+      "exports": [
+        {
+          "name": "உறுதி_உருவாக்கு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "தாமதம்",
+          "minArgs": 1,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "தீர்வு",
+          "minArgs": 0,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "மறுப்பு",
+          "minArgs": 0,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "அனைத்து",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "போட்டி",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "நிலை_பெறு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "மதிப்பு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "பிழை",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "பின்இணை",
+          "minArgs": 2,
+          "maxArgs": 3,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "நிகழ்வு",
+      "summary": "நிகழ்வு வெளியீட்டாளர்; சந்தாதாரர் பட்டியல் மற்றும் ஒருமுறை நிகழ்வுகள்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "உமிழ்ப்பொருள்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "கேட்பவர்கள்_உள்ளதா",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "வலை",
+      "summary": "loopback HTTP கிளையன், சேவகன், வழி மற்றும் நிலையான கோப்புகள்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED",
+        "YAAZHICODE_NETWORK_URL",
+        "YAAZHICODE_NETWORK_SCHEME",
+        "YAAZHICODE_NETWORK_HOST_DENIED",
+        "YAAZHICODE_NETWORK_STATE",
+        "YAAZHICODE_NETWORK_ENDED",
+        "YAAZHICODE_NETWORK_HEADER",
+        "YAAZHICODE_ROUTE_PATH",
+        "YAAZHICODE_ROUTE_METHOD",
+        "YAAZHICODE_STATIC_DIRECTORY",
+        "YAAZHICODE_STATIC_DIRECTORY_ESCAPE",
+        "YAAZHICODE_JSON_ERROR",
+        "YAAZHICODE_RANGE_ERROR",
+        "YAAZHICODE_FILE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "கோரிக்கை",
+          "minArgs": 1,
+          "maxArgs": 3,
+          "signature": {
+            "params": [
+              {
+                "name": "முகவரி",
+                "type": "string"
+              },
+              {
+                "name": "தலைப்புகள்",
+                "type": "object",
+                "optional": true
+              },
+              {
+                "name": "உடல்",
+                "type": "string",
+                "optional": true
+              }
+            ],
+            "returns": "வலை.வாடிக்கையாளர்_பதில்",
+            "async": true,
+            "summary": "loopback HTTP கோரிக்கையை அனுப்பி பதிலை வாக்குறுதியாகத் திருப்பும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_NETWORK_URL",
+              "YAAZHICODE_NETWORK_SCHEME",
+              "YAAZHICODE_NETWORK_HOST_DENIED"
+            ],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அனுப்பு",
+          "minArgs": 2,
+          "maxArgs": 4,
+          "signature": {
+            "params": [
+              {
+                "name": "முகவரி",
+                "type": "string"
+              },
+              {
+                "name": "தலைப்புகள்",
+                "type": "object",
+                "optional": true
+              },
+              {
+                "name": "உடல்",
+                "type": "string",
+                "optional": true
+              },
+              {
+                "name": "விருப்பங்கள்",
+                "type": "object",
+                "optional": true
+              }
+            ],
+            "returns": "வலை.வாடிக்கையாளர்_பதில்",
+            "async": true,
+            "summary": "loopback HTTP POST கோரிக்கையை அனுப்பி பதிலை வாக்குறுதியாகத் திருப்பும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_NETWORK_URL",
+              "YAAZHICODE_NETWORK_SCHEME",
+              "YAAZHICODE_NETWORK_HOST_DENIED"
+            ],
+            "overloads": []
+          }
+        },
+        {
+          "name": "சேவகன்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "loopback HTTP சேவையகத்தை உருவாக்கும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_NETWORK_STATE",
+              "YAAZHICODE_NETWORK_HOST_DENIED",
+              "YAAZHICODE_RANGE_ERROR",
+              "YAAZHICODE_ROUTE_PATH",
+              "YAAZHICODE_ROUTE_METHOD",
+              "YAAZHICODE_STATIC_DIRECTORY",
+              "YAAZHICODE_STATIC_DIRECTORY_ESCAPE"
+            ],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "பாதுகாப்புவலை",
+      "summary": "loopback HTTPS கிளையன்/சேவகன்; CA சான்றிதழ் நம்பிக்கை.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED",
+        "YAAZHICODE_NETWORK_URL",
+        "YAAZHICODE_NETWORK_SCHEME",
+        "YAAZHICODE_NETWORK_HOST_DENIED",
+        "YAAZHICODE_NETWORK_STATE",
+        "YAAZHICODE_NETWORK_ENDED",
+        "YAAZHICODE_NETWORK_HEADER",
+        "YAAZHICODE_ROUTE_PATH",
+        "YAAZHICODE_ROUTE_METHOD",
+        "YAAZHICODE_STATIC_DIRECTORY",
+        "YAAZHICODE_STATIC_DIRECTORY_ESCAPE",
+        "YAAZHICODE_JSON_ERROR",
+        "YAAZHICODE_RANGE_ERROR",
+        "YAAZHICODE_FS_INVALID_PATH",
+        "YAAZHICODE_FS_PATH_DENIED",
+        "YAAZHICODE_FILE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "கோரிக்கை",
+          "minArgs": 1,
+          "maxArgs": 3,
+          "signature": {
+            "params": [
+              {
+                "name": "முகவரி",
+                "type": "string"
+              },
+              {
+                "name": "தலைப்புகள்",
+                "type": "object",
+                "optional": true
+              },
+              {
+                "name": "உடல்",
+                "type": "string",
+                "optional": true
+              }
+            ],
+            "returns": "வலை.வாடிக்கையாளர்_பதில்",
+            "async": true,
+            "summary": "loopback HTTPS கோரிக்கையை அனுப்பி பதிலை வாக்குறுதியாகத் திருப்பும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_NETWORK_URL",
+              "YAAZHICODE_NETWORK_SCHEME",
+              "YAAZHICODE_NETWORK_HOST_DENIED"
+            ],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அனுப்பு",
+          "minArgs": 2,
+          "maxArgs": 4,
+          "signature": {
+            "params": [
+              {
+                "name": "முகவரி",
+                "type": "string"
+              },
+              {
+                "name": "தலைப்புகள்",
+                "type": "object",
+                "optional": true
+              },
+              {
+                "name": "உடல்",
+                "type": "string",
+                "optional": true
+              },
+              {
+                "name": "விருப்பங்கள்",
+                "type": "object",
+                "optional": true
+              }
+            ],
+            "returns": "வலை.வாடிக்கையாளர்_பதில்",
+            "async": true,
+            "summary": "loopback HTTPS POST கோரிக்கையை அனுப்பி பதிலை வாக்குறுதியாகத் திருப்பும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_NETWORK_URL",
+              "YAAZHICODE_NETWORK_SCHEME",
+              "YAAZHICODE_NETWORK_HOST_DENIED"
+            ],
+            "overloads": []
+          }
+        },
+        {
+          "name": "சேவகன்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "சான்றிதழ்",
+                "type": "string"
+              },
+              {
+                "name": "சாவி",
+                "type": "string"
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "loopback HTTPS சேவையகத்தைச் சான்றிதழ் மற்றும் சாவியுடன் உருவாக்கும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_FS_INVALID_PATH",
+              "YAAZHICODE_FS_PATH_DENIED",
+              "YAAZHICODE_FILE_ERROR",
+              "YAAZHICODE_NETWORK_STATE",
+              "YAAZHICODE_NETWORK_HOST_DENIED",
+              "YAAZHICODE_RANGE_ERROR",
+              "YAAZHICODE_ROUTE_PATH",
+              "YAAZHICODE_ROUTE_METHOD",
+              "YAAZHICODE_STATIC_DIRECTORY",
+              "YAAZHICODE_STATIC_DIRECTORY_ESCAPE"
+            ],
+            "overloads": []
+          }
+        },
+        {
+          "name": "நம்பகம்_சேர்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "சான்றிதழ்",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "கூடுதல் CA சான்றிதழை நம்பகமானதாகச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "இயங்குதளம்",
+      "summary": "இயங்குதளத் தகவல் மற்றும் சூழல் மாறிகள்; வேர் அணுகல் இல்லை.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED"
+      ],
+      "exports": [
+        {
+          "name": "தள_பெயர்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "வெளியீட்டு_பெயர்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "கட்டமைப்பு_பெயர்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "மைய_எண்ணிக்கை",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "இலவச_நினைவகம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "மொத்த_நினைவகம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "இயக்க_நேரம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "கணினி_பெயர்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "தற்காலிக_கோப்பகம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "வீட்டு_கோப்பகம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "முனையம்",
+      "summary": "முனைய வெளியீடு மற்றும் பிழை வரிகள்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "எழுது",
+          "minArgs": 0,
+          "maxArgs": null,
+          "signature": null
+        },
+        {
+          "name": "வரி",
+          "minArgs": 0,
+          "maxArgs": null,
+          "signature": null
+        },
+        {
+          "name": "பிழை_எழுது",
+          "minArgs": 0,
+          "maxArgs": null,
+          "signature": null
+        },
+        {
+          "name": "பிழை_வரி",
+          "minArgs": 0,
+          "maxArgs": null,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "செயல்முறை",
+      "summary": "செயல்முறைத் தகவல், வாதங்கள் மற்றும் வெளியேறல்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED"
+      ],
+      "exports": [
+        {
+          "name": "பெயர்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "அடையாள_எண்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "வாதங்கள்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "நடப்பு_கோப்பகம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "சூழல்_பெறு",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "சூழல்_பட்டியல்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "இயக்க_நேரம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        },
+        {
+          "name": "வெளியேறு",
+          "minArgs": 0,
+          "maxArgs": 1,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "வரிவாசிப்பு",
+      "summary": "வரி வாசிப்பான்; மூடப்பட்ட பிறகு வாசிப்பு தோல்வியடையும்.",
+      "errors": [
+        "YAAZHICODE_READER_CLOSED",
+        "YAAZHICODE_CAPABILITY_DENIED",
+        "YAAZHICODE_TYPE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "வாசிப்பாளர்_உருவாக்கு",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "மறையியல்",
+      "summary": "குறியாக்க ஹாஷ் மற்றும் பாதுகாப்பான சீரற்ற மதிப்புகள்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_CAPABILITY_DENIED",
+        "YAAZHICODE_CRYPTO_ALGORITHM",
+        "YAAZHICODE_RANGE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "சுருக்கம்",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "அடையாள_சுருக்கம்",
+          "minArgs": 3,
+          "maxArgs": 3,
+          "signature": null
+        },
+        {
+          "name": "நேர_ஒப்பிடு",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": null
+        },
+        {
+          "name": "அகஸ்தி_பைட்டுகள்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "அகஸ்தி_உரை",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "அனன்ய_அடையாளம்",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": null
+        }
+      ]
+    },
+    {
+      "name": "ஓடை",
+      "summary": "வரம்புடைய இரும்பு ஓடைகள் மற்றும் பின்னழுத்தம்.",
+      "errors": [
+        "YAAZHICODE_TYPE_ERROR",
+        "YAAZHICODE_RANGE_ERROR"
+      ],
+      "exports": [
+        {
+          "name": "நினைவு_ஓடை",
+          "minArgs": 0,
+          "maxArgs": 1,
+          "signature": null
+        },
+        {
+          "name": "இடையகம்",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": null
+        }
+      ]
+    }
+  ],
+  "globals": [
+    {
+      "name": "எண்ணாக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "மதிப்பு",
+            "type": "any"
+          }
+        ],
+        "returns": "number",
+        "async": false,
+        "summary": "மதிப்பை எண்ணாக மாற்றும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "உரையாக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "மதிப்பு",
+            "type": "any"
+          }
+        ],
+        "returns": "string",
+        "async": false,
+        "summary": "மதிப்பை உரையாக மாற்றும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "எண்ணா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சரமா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "பட்டியலா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "பொருளா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "செயலா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "வெற்றிடமா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "வகுப்பா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "அச்சிடு",
+      "minArgs": 0,
+      "maxArgs": null,
+      "signature": {
+        "params": [
+          {
+            "name": "மதிப்புகள்",
+            "type": "any",
+            "rest": true
+          }
+        ],
+        "returns": "வெற்றிடம்",
+        "async": false,
+        "summary": "மதிப்புகளை வரியாக அச்சிடும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "எழுது",
+      "minArgs": 0,
+      "maxArgs": null,
+      "signature": {
+        "params": [
+          {
+            "name": "மதிப்புகள்",
+            "type": "any",
+            "rest": true
+          }
+        ],
+        "returns": "வெற்றிடம்",
+        "async": false,
+        "summary": "மதிப்புகளை வரியாக எழுதும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "உள்ளீடு",
+      "minArgs": 0,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "தூண்டுதல்",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "returns": "string",
+        "async": false,
+        "summary": "தரவு நுழைவிலிருந்து ஒரு வரியைப் படிக்கும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "வடிவமை",
+      "minArgs": 1,
+      "maxArgs": null,
+      "signature": {
+        "params": [
+          {
+            "name": "வார்ப்புரு",
+            "type": "string"
+          },
+          {
+            "name": "மதிப்புகள்",
+            "type": "any",
+            "rest": true
+          }
+        ],
+        "returns": "string",
+        "async": false,
+        "summary": "வார்ப்புருவை மதிப்புகளுடன் வடிவமைக்கும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "முழுமையாக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "தரை",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "கூரை",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "முழுவெட்டு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "முழுமதிப்பு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சிறிய",
+      "minArgs": 1,
+      "maxArgs": null,
+      "signature": null
+    },
+    {
+      "name": "பெரிய",
+      "minArgs": 1,
+      "maxArgs": null,
+      "signature": null
+    },
+    {
+      "name": "வர்க்கம்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "வர்க்கமூலம்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சக்தி",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "சீரற்ற",
+      "minArgs": 0,
+      "maxArgs": 0,
+      "signature": null
+    },
+    {
+      "name": "சீரற்ற_முழு",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "நீளம்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "மதிப்பு",
+            "type": "any"
+          }
+        ],
+        "returns": "number",
+        "async": false,
+        "summary": "உரை அல்லது பட்டியலின் நீளத்தைத் திருப்பும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "தேடு",
+      "minArgs": 2,
+      "maxArgs": 3,
+      "signature": {
+        "params": [
+          {
+            "name": "தேடுதளம்",
+            "type": "any"
+          },
+          {
+            "name": "தேடல்",
+            "type": "any"
+          },
+          {
+            "name": "தொடக்கம்",
+            "type": "number",
+            "optional": true
+          }
+        ],
+        "returns": "number",
+        "async": false,
+        "summary": "உரை அல்லது பட்டியலில் தேடலின் முதல் இடத்தைத் திருப்பும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "மாற்று",
+      "minArgs": 3,
+      "maxArgs": 3,
+      "signature": {
+        "params": [
+          {
+            "name": "உரை",
+            "type": "string"
+          },
+          {
+            "name": "தேடல்",
+            "type": "string"
+          },
+          {
+            "name": "மாற்றீடு",
+            "type": "string"
+          }
+        ],
+        "returns": "string",
+        "async": false,
+        "summary": "உரையில் தேடலை மாற்றீடு செய்யும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "பிரி",
+      "minArgs": 1,
+      "maxArgs": 2,
+      "signature": {
+        "params": [
+          {
+            "name": "உரை",
+            "type": "string"
+          },
+          {
+            "name": "பிரிப்பான்",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "returns": "array",
+        "async": false,
+        "summary": "உரையைப் பிரித்துப் பட்டியலாக்கும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "இணை",
+      "minArgs": 1,
+      "maxArgs": 2,
+      "signature": {
+        "params": [
+          {
+            "name": "பட்டியல்",
+            "type": "array"
+          },
+          {
+            "name": "இணைப்பான்",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "returns": "string",
+        "async": false,
+        "summary": "பட்டியல் உறுப்புகளை இணைக்கும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "பெரிய_எழுத்து",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சிறிய_எழுத்து",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "வெட்டு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "தொடக்கம்",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "முடிவு",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "கொண்டுள்ளது",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "பகுதி",
+      "minArgs": 2,
+      "maxArgs": 3,
+      "signature": null
+    },
+    {
+      "name": "மீள்",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "எழுத்துக்கள்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "தலைகீழ்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சேர்",
+      "minArgs": 1,
+      "maxArgs": null,
+      "signature": {
+        "params": [
+          {
+            "name": "பட்டியல்",
+            "type": "array"
+          },
+          {
+            "name": "மதிப்புகள்",
+            "type": "any",
+            "rest": true
+          }
+        ],
+        "returns": "array",
+        "async": false,
+        "summary": "பட்டியலின் இறுதியில் மதிப்புகளைச் சேர்க்கும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "அகற்று",
+      "minArgs": 1,
+      "maxArgs": 2,
+      "signature": {
+        "params": [
+          {
+            "name": "பட்டியல்",
+            "type": "array"
+          },
+          {
+            "name": "மதிப்பு",
+            "type": "any",
+            "optional": true
+          }
+        ],
+        "returns": "any",
+        "async": false,
+        "summary": "பட்டியலிலிருந்து கடைசி அல்லது குறிப்பிட்ட மதிப்பை அகற்றும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "வரைபடம்",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "வடிகட்டு",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "குறை",
+      "minArgs": 2,
+      "maxArgs": 3,
+      "signature": null
+    },
+    {
+      "name": "ஒவ்வொன்றும்",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "வரிசை",
+      "minArgs": 1,
+      "maxArgs": 3,
+      "signature": null
+    },
+    {
+      "name": "வரிசைப்படுத்து",
+      "minArgs": 1,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "விசைகள்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "பொருள்",
+            "type": "object"
+          }
+        ],
+        "returns": "array",
+        "async": false,
+        "summary": "பொருளின் விசைகளைத் திருப்பும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "மதிப்புகள்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "பொருள்",
+            "type": "object"
+          }
+        ],
+        "returns": "array",
+        "async": false,
+        "summary": "பொருளின் மதிப்புகளைத் திருப்பும்.",
+        "errors": [],
+        "overloads": []
+      }
+    },
+    {
+      "name": "இணைப்புகள்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "புதுப்பி",
+      "minArgs": 1,
+      "maxArgs": null,
+      "signature": null
+    },
+    {
+      "name": "நகல்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "உள்ளதா",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "கோப்பு_படி",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "பாதை",
+            "type": "string"
+          }
+        ],
+        "returns": "string",
+        "async": false,
+        "summary": "UTF-8 கோப்பைப் படிக்கும்.",
+        "errors": [
+          "YAAZHICODE_TYPE_ERROR",
+          "YAAZHICODE_CAPABILITY_DENIED",
+          "YAAZHICODE_FS_INVALID_PATH",
+          "YAAZHICODE_FS_PATH_DENIED",
+          "YAAZHICODE_FILE_ERROR",
+          "YAAZHICODE_FILE_ENCODING"
+        ],
+        "overloads": []
+      }
+    },
+    {
+      "name": "கோப்பு_எழுது",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": {
+        "params": [
+          {
+            "name": "பாதை",
+            "type": "string"
+          },
+          {
+            "name": "உள்ளடக்கம்",
+            "type": "string"
+          }
+        ],
+        "returns": "வெற்றிடம்",
+        "async": false,
+        "summary": "கோப்பை எழுதும்.",
+        "errors": [
+          "YAAZHICODE_TYPE_ERROR",
+          "YAAZHICODE_CAPABILITY_DENIED",
+          "YAAZHICODE_FS_INVALID_PATH",
+          "YAAZHICODE_FS_PATH_DENIED",
+          "YAAZHICODE_FILE_ERROR"
+        ],
+        "overloads": []
+      }
+    },
+    {
+      "name": "கோப்பு_சேர்",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "கோப்பு_உள்ளதா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "கோப்பு_நீக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "கோப்பகம்_உருவாக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "கோப்பக_பட்டியல்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "தற்போதைய_கோப்பகம்",
+      "minArgs": 0,
+      "maxArgs": 0,
+      "signature": null
+    },
+    {
+      "name": "பாதை_இணை",
+      "minArgs": 1,
+      "maxArgs": null,
+      "signature": null
+    },
+    {
+      "name": "பாதை_தீர்மானி",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "நேரம்_இப்போது",
+      "minArgs": 0,
+      "maxArgs": 0,
+      "signature": null
+    },
+    {
+      "name": "தேதி_இப்போது",
+      "minArgs": 0,
+      "maxArgs": 0,
+      "signature": null
+    },
+    {
+      "name": "தேதி_உருவாக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "தேதி_பகுதி",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "தேதி_வடிவமை",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "தூங்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": {
+        "params": [
+          {
+            "name": "மில்லிவினாடி",
+            "type": "number"
+          }
+        ],
+        "returns": "வெற்றிடம்",
+        "async": true,
+        "summary": "குறிப்பிட்ட காலம் காத்திருக்கும்.",
+        "errors": [
+          "YAAZHICODE_TYPE_ERROR",
+          "YAAZHICODE_RANGE_ERROR",
+          "YAAZHICODE_TIMER_ERROR"
+        ],
+        "overloads": []
+      }
+    },
+    {
+      "name": "பிழை",
+      "minArgs": 1,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "பிழை_செய்தி",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "பிழை_குறியீடு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "பிழை_தடம்",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சூழல்_மதிப்பு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சூழல்_உள்ளதா",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "சூழல்_வை",
+      "minArgs": 2,
+      "maxArgs": 2,
+      "signature": null
+    },
+    {
+      "name": "சூழல்_நீக்கு",
+      "minArgs": 1,
+      "maxArgs": 1,
+      "signature": null
+    },
+    {
+      "name": "வெளியேறு",
+      "minArgs": 0,
+      "maxArgs": 1,
+      "signature": null
+    }
+  ],
+  "instances": [
+    {
+      "type": "வலை.சேவகன்",
+      "summary": "loopback HTTP/HTTPS சேவையகம்.",
+      "members": [
+        {
+          "name": "பயன்படுத்து",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "மென்பொருள்",
+                "type": "function"
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "மென்பொருள் (middleware) சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "வழி",
+          "kind": "method",
+          "minArgs": 3,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "முறை",
+                "type": "string"
+              },
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "குறிப்பிட்ட HTTP முறைக்கு வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "பெறு",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "பெறு வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அனுப்பு",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "அனுப்பு வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "புதுப்பி",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "புதுப்பி வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "மாற்று",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "மாற்று வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "நீக்கு",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "நீக்கு வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "எந்தமுறை",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": null,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              },
+              {
+                "name": "கையாளிகள்",
+                "type": "function",
+                "rest": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "எந்தமுறை வழியைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "நிலையானகோப்புகள்",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "கோப்புறை",
+                "type": "string",
+                "optional": true
+              }
+            ],
+            "returns": "வலை.சேவகன்",
+            "async": false,
+            "summary": "நிலையான கோப்பு கோப்புறையை அமைக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கேள்",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 3,
+          "signature": {
+            "params": [
+              {
+                "name": "விருப்பங்கள்",
+                "type": "object",
+                "optional": true
+              },
+              {
+                "name": "அழைப்பு",
+                "type": "function",
+                "optional": true
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": true,
+            "summary": "சேவையகத்தைத் தொடங்கிக் கேட்கும்; (துறை, முகவரி, அழைப்பு) வடிவமும் ஏற்கும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_NETWORK_STATE",
+              "YAAZHICODE_NETWORK_HOST_DENIED",
+              "YAAZHICODE_RANGE_ERROR"
+            ],
+            "overloads": [
+              {
+                "params": [
+                  {
+                    "name": "துறை",
+                    "type": "number"
+                  },
+                  {
+                    "name": "இயந்திரம்",
+                    "type": "string",
+                    "optional": true
+                  },
+                  {
+                    "name": "அழைப்பு",
+                    "type": "function",
+                    "optional": true
+                  }
+                ],
+                "returns": "வெற்றிடம்",
+                "async": true,
+                "summary": "பழைய நடத்தையைப் பாதுகாக்கும் (துறை, முகவரி, அழைப்பு) வடிவம்.",
+                "errors": [
+                  "YAAZHICODE_CAPABILITY_DENIED",
+                  "YAAZHICODE_NETWORK_STATE",
+                  "YAAZHICODE_NETWORK_HOST_DENIED",
+                  "YAAZHICODE_RANGE_ERROR"
+                ],
+                "overloads": []
+              }
+            ]
+          }
+        },
+        {
+          "name": "நிறுத்து",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "வெற்றிடம்",
+            "async": true,
+            "summary": "சேவையகத்தை நிறுத்தும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "துறை_பெறு",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "number",
+            "async": false,
+            "summary": "சேவையகம் கேட்கும் துறையைத் திருப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "இயங்குகிறதா",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "boolean",
+            "async": false,
+            "summary": "சேவையகம் இயங்குகிறதா எனக் கூறும்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "வலை.கோரிக்கை",
+      "summary": "சேவையகத்திற்கு வந்த HTTP கோரிக்கை.",
+      "members": [
+        {
+          "name": "முறை",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "HTTP முறை.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "முழு",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "முழுமையான கோரிக்கை முகவரி.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "பாதை",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "கோரிக்கைப் பாதை.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "வினவல்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "வினவல் சரம்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தலைப்புகள்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "object",
+            "async": false,
+            "summary": "கோரிக்கைத் தலைப்புகள்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அளவுருக்கள்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "object",
+            "async": false,
+            "summary": "வினவல் அளவுருக்கள்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "வழி_அளவுருக்கள்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "object",
+            "async": false,
+            "summary": "வழி அளவுருக்கள்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "உடல்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "any",
+            "async": false,
+            "summary": "பகுப்பாய்வு செய்யப்பட்ட உடல்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "படிவம்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "object",
+            "async": false,
+            "summary": "URL-encoded படிவப் புலங்கள்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "உடல்_வகை",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "உடல் வகை.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "உடல்_பெறு",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "மூல உடல் உரையைத் திருப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தலைப்பு_பெறு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பெயர்",
+                "type": "string"
+              }
+            ],
+            "returns": "any",
+            "async": false,
+            "summary": "தலைப்பு மதிப்பைத் திருப்பும்; இல்லையெனில் வெற்றிடம்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அளவுரு_பெறு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பெயர்",
+                "type": "string"
+              }
+            ],
+            "returns": "any",
+            "async": false,
+            "summary": "வினவல் அளவுருவைத் திருப்பும்; இல்லையெனில் வெற்றிடம்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "வழி_அளவுரு_பெறு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பெயர்",
+                "type": "string"
+              }
+            ],
+            "returns": "any",
+            "async": false,
+            "summary": "வழி அளவுருவைத் திருப்பும்; இல்லையெனில் வெற்றிடம்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "வலை.பதில்",
+      "summary": "சேவையகம் அனுப்பும் HTTP பதில்.",
+      "members": [
+        {
+          "name": "நிலை",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "குறியீடு",
+                "type": "number"
+              }
+            ],
+            "returns": "வலை.பதில்",
+            "async": false,
+            "summary": "HTTP நிலைக் குறியீட்டை அமைக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "குறியீடு_அமை",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "குறியீடு",
+                "type": "number"
+              }
+            ],
+            "returns": "வலை.பதில்",
+            "async": false,
+            "summary": "HTTP நிலைக் குறியீட்டை அமைக்கும் (பழைய பெயர்).",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தலைப்புகள்",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "பெயர்_அல்லது_பொருள்",
+                "type": "any"
+              },
+              {
+                "name": "மதிப்பு",
+                "type": "string",
+                "optional": true
+              }
+            ],
+            "returns": "வலை.பதில்",
+            "async": false,
+            "summary": "ஒரு தலைப்பை அல்லது தலைப்புப் பொருளை அமைக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தலைப்பு_சேர்",
+          "kind": "method",
+          "minArgs": 2,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "பெயர்",
+                "type": "string"
+              },
+              {
+                "name": "மதிப்பு",
+                "type": "string"
+              }
+            ],
+            "returns": "வலை.பதில்",
+            "async": false,
+            "summary": "ஒரு தலைப்பைச் சேர்க்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "அனுப்பு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "உடல்",
+                "type": "any"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "உரை அல்லது இடையக உடலுடன் பதிலை முடிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "உரை_அனுப்பு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "உரை",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "உரை உடலுடன் பதிலை முடிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "இடையக_அனுப்பு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "இடையகம்",
+                "type": "object"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "இடையக உடலுடன் பதிலை முடிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "JSON",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "மதிப்பு",
+                "type": "any"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "JSON உடலுடன் பதிலை முடிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "ஜேசன்",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "மதிப்பு",
+                "type": "any"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "JSON உடலுடன் பதிலை முடிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "கோப்புஅனுப்பு",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 1,
+          "signature": {
+            "params": [
+              {
+                "name": "பாதை",
+                "type": "string"
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "அனுமதிக்கப்பட்ட கோப்பு மூலத்திலிருந்து கோப்பைப் படித்து அனுப்பும்.",
+            "errors": [
+              "YAAZHICODE_CAPABILITY_DENIED",
+              "YAAZHICODE_TYPE_ERROR",
+              "YAAZHICODE_FS_INVALID_PATH",
+              "YAAZHICODE_FS_PATH_DENIED",
+              "YAAZHICODE_FILE_ERROR"
+            ],
+            "overloads": []
+          }
+        },
+        {
+          "name": "வழிமாற்று",
+          "kind": "method",
+          "minArgs": 1,
+          "maxArgs": 2,
+          "signature": {
+            "params": [
+              {
+                "name": "இடம்",
+                "type": "string"
+              },
+              {
+                "name": "குறியீடு",
+                "type": "number",
+                "optional": true
+              }
+            ],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "வழிமாற்றல் பதிலை அனுப்பும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "இறுதி",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "வெற்றிடம்",
+            "async": false,
+            "summary": "காலியான பதிலை முடிக்கும்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "முடிந்ததா",
+          "kind": "method",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "boolean",
+            "async": false,
+            "summary": "பதில் முடிந்ததா எனக் கூறும்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "வலை.வாடிக்கையாளர்_பதில்",
+      "summary": "HTTP வாடிக்கையாளர் பெற்ற பதில்.",
+      "members": [
+        {
+          "name": "குறியீடு",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "number",
+            "async": false,
+            "summary": "HTTP நிலைக் குறியீடு.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "தலைப்புகள்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "object",
+            "async": false,
+            "summary": "பதில் தலைப்புகள்.",
+            "errors": [],
+            "overloads": []
+          }
+        },
+        {
+          "name": "உடல்",
+          "kind": "property",
+          "minArgs": 0,
+          "maxArgs": 0,
+          "signature": {
+            "params": [],
+            "returns": "string",
+            "async": false,
+            "summary": "பதில் உடல்.",
+            "errors": [],
+            "overloads": []
+          }
+        }
+      ]
+    }
+  ]
+}

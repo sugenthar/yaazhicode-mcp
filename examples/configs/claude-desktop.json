@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "yaazhicode": {
+      "command": "node",
+      "args": ["D:\\YaazhiCode\\YaazhiCode MCP\\dist\\transports\\cli.js", "--stdio"]
+    }
+  }
+}

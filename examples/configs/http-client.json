@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "yaazhicode": {
+      "type": "http",
+      "url": "https://yaazhi-code-mcp.<hosting-domain>/mcp"
+    }
+  }
+}

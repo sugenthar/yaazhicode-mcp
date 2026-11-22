@@ -1,0 +1,91 @@
+{
+  "languageVersion": "0.1.0",
+  "mcpPackageVersion": "0.1.0",
+  "syncedAt": "2026-11-22T11:37:24.534Z",
+  "git": {
+    "yaazhicode": "0d90f84d29bd4d909dfb456c00e4547a4860323b",
+    "web": "ec061901242bd7bb08279fa571c125b283629d8b"
+  },
+  "sources": [
+    {
+      "path": "YaazhiCode/package.json",
+      "sha256": "366b8605c7603ca5638addcbf55dba320a5891845e669c84a6d83acde8e3195d"
+    },
+    {
+      "path": "YaazhiCode/SPECIFICATION.md",
+      "sha256": "a86c25c65f8bb0599140ec69d82655b1cc5014b5f296396724218c2806c195e1"
+    },
+    {
+      "path": "YaazhiCode/docs/KEYWORDS.md",
+      "sha256": "96580628f0116703544f1276dc963c400f12b7d988aea82f4c9d98fa96d04564"
+    },
+    {
+      "path": "YaazhiCode/docs/STANDARD_LIBRARY.md",
+      "sha256": "d04d4094c62eb3bcc23a071e38fa6c2f40e025e40ca245438c7a9d4a5482c496"
+    },
+    {
+      "path": "YaazhiCode/docs/BUILTIN_MODULES.md",
+      "sha256": "ffe2bf272ac6240fe27efc7003e4f7dfa55b43c7ea024b39f75f7ce5a9e91eb2"
+    },
+    {
+      "path": "YaazhiCode/docs/LIMITATIONS.md",
+      "sha256": "20ed2f450dcdfae820f6c70cb7cf0f967362e4a0a9335651c2deffc45ca4ffae"
+    },
+    {
+      "path": "YaazhiCode/docs/MODULES.md",
+      "sha256": "2434983261296ef86cdbbb7c4d98322b7b04da98ea7c17ed351d86c1337ddcec"
+    },
+    {
+      "path": "YaazhiCode/docs/NUMERALS.md",
+      "sha256": "2701b6eaf02a20833a82f27a5e12c5649ef279e1f293938bd53f901dcbb0cda3"
+    },
+    {
+      "path": "YaazhiCode/docs/CLI.md",
+      "sha256": "4420e01d1fe1dd0934c3443367081b6ef7e3cc52f3c0f54b91025d597ed1adfc"
+    },
+    {
+      "path": "Web/src/content/languageData.js",
+      "sha256": "eb85b862341f8d0549e0f9f880524c23e854d7b91acdd42d0ee07929ea4d9a4b"
+    },
+    {
+      "path": "Web/src/content/examplesData.js",
+      "sha256": "56768cbed0727606eed997565e5f4f88843aa0d20137a41303bb9a2ee25498f8"
+    },
+    {
+      "path": "Web/public/llms.txt",
+      "sha256": "2dfa43c61e418c4348d89029481e75d4ef3293d595d165ebd21bdbfe90262f38"
+    },
+    {
+      "path": "Web/public/llms-full.txt",
+      "sha256": "6b8bb986212c3cb1baea5f96275cb63b4d2bdea6158db1b7ce28fe5331d281e3"
+    },
+    {
+      "path": "Web/public/yaazhicode-spec.json",
+      "sha256": "dbbb973bba4dd3092f76c597c9514bca1d5ebe57fa0c550bbf3be830bbbafc74"
+    }
+  ],
+  "counts": {
+    "activeKeywords": 40,
+    "standardGlobalNames": 85,
+    "apiGlobals": 79,
+    "builtinModules": 17,
+    "instanceTypes": 4,
+    "examples": 58,
+    "diagnosticCodes": 131
+  },
+  "authoritativeSources": [
+    "YaazhiCode/SPECIFICATION.md",
+    "YaazhiCode/docs/KEYWORDS.md",
+    "YaazhiCode/src/lexer/keywords.ts",
+    "YaazhiCode/docs/STANDARD_LIBRARY.md",
+    "YaazhiCode/docs/BUILTIN_MODULES.md",
+    "YaazhiCode/docs/LIMITATIONS.md",
+    "yaazhicode api --json"
+  ],
+  "staleSourcesIdentified": [
+    "Web/public/llms.txt",
+    "Web/public/llms-full.txt",
+    "Web/public/yaazhicode-spec.json",
+    "Web/public/docs/AI_CODING_GUIDE.md"
+  ]
+}

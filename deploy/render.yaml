@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: yaazhicode-mcp
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:http
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: YAAZHICODE_MCP_TRANSPORT
+        value: http
+      - key: YAAZHICODE_MCP_STATEFUL
+        value: false
+      - key: YAAZHICODE_MCP_ALLOWED_HOSTS
+        value: yaazhicode-mcp.onrender.com:10000
+      - key: YAAZHICODE_MCP_ALLOWED_ORIGINS
+        value: https://yaazhi-code-web.vercel.app
+      - key: YAAZHICODE_MCP_LOG_LEVEL
+        value: info
+    healthCheckPath: /healthz
