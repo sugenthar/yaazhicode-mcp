@@ -2,8 +2,6 @@
 
 Official Model Context Protocol server for **YaazhiCode 0.1.0**. It gives compatible AI clients authoritative Tamil language knowledge, verified examples, static validation, structural analysis, and diagnostic explanations.
 
-> **No deployment or npm publish has been performed.** This repository is local-only until explicit approval.
-
 ## What it does
 
 - **18 tools** for language facts, examples, validation, explanation, analysis, and conservative corrections.
@@ -17,10 +15,11 @@ Official Model Context Protocol server for **YaazhiCode 0.1.0**. It gives compat
 
 The public web execution endpoint restricts capabilities but runs interpreter code in-process; its `Promise.race` timeout cannot interrupt a synchronous interpreter loop. Submitting user code to a third-party service also raises privacy concerns. A future execution tool should use a worker thread that can be terminated, explicit opt-in, empty filesystem roots, captured stdio only, and no secrets.
 
-## Quick start (local, no publishing required)
+## Quick start
 
-```powershell
-cd "D:\YaazhiCode\YaazhiCode MCP"
+```bash
+git clone https://github.com/sugenthar/yaazhicode-mcp.git
+cd yaazhicode-mcp
 npm install
 npm run build
 npm run start:stdio
@@ -28,21 +27,48 @@ npm run start:stdio
 
 Point your MCP client at `node dist/transports/cli.js --stdio` in this directory.
 
-Remote HTTP:
+### Remote HTTP (Streamable HTTP transport)
 
-```powershell
-$env:PORT = "3000"
-$env:HOST = "127.0.0.1"
-npm run start:http
+```bash
+PORT=3000 HOST=127.0.0.1 npm run start:http
 ```
 
 Endpoint: `POST /mcp` (Streamable HTTP), `GET /healthz`.
+
+### OpenCode integration
+
+Add to your `.opencode/config.json`:
+
+```json
+{
+  "mcp": {
+    "yaazhicode": {
+      "command": "node",
+      "args": ["dist/transports/cli.js", "--stdio"],
+      "cwd": "/path/to/yaazhicode-mcp"
+    }
+  }
+}
+```
+
+Or for HTTP transport:
+
+```json
+{
+  "mcp": {
+    "yaazhicode": {
+      "url": "http://127.0.0.1:3000/mcp"
+    }
+  }
+}
+```
 
 ## Scripts
 
 | Script | Purpose |
 | --- | --- |
 | `npm run build` | Compile TypeScript to `dist/`. |
+| `npm run typecheck` | Type-check without emitting. |
 | `npm test` | Unit + integration tests (stdio and HTTP). |
 | `npm run sync:knowledge` | Regenerate offline knowledge from the read-only reference projects. |
 | `npm run check:knowledge` | Fail if committed snapshots are stale. |
@@ -60,6 +86,22 @@ Endpoint: `POST /mcp` (Streamable HTTP), `GET /healthz`.
 - [Free hosting options](docs/hosting/FREE-HOSTING.md)
 - [Language inventory](docs/reference/LANGUAGE-INVENTORY.md)
 - [Documentation gaps](docs/reference/DOCUMENTATION-GAPS.md)
+
+## Security
+
+- Body, code, prompt, and result size limits
+- In-memory rate limiting (configurable per-minute)
+- Host/origin allow-lists for HTTP transport
+- Session caps and idle timeouts
+- Safe diagnostics (no source text echoed)
+- No code logging
+- No code execution capability
+
+See [Security documentation](docs/security/SECURITY.md) for details.
+
+## Publishing and hosting
+
+This repository contains the source code for the `@yaazhicode/mcp` npm package. **Source availability on GitHub does not imply an npm publish has occurred.** The package is published separately with explicit approval. Likewise, public hosting (Render, Vercel, Docker, etc.) is a separate deployment decision. See [deployment docs](docs/hosting/FREE-HOSTING.md) and `deploy/` for configuration examples.
 
 ## License
 

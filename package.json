@@ -55,12 +55,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sugenthar/yaazhiCode.git",
-    "directory": "YaazhiCode MCP"
+    "url": "git+https://github.com/sugenthar/yaazhicode-mcp.git"
   },
-  "homepage": "https://github.com/sugenthar/yaazhiCode",
+  "homepage": "https://github.com/sugenthar/yaazhicode-mcp",
   "bugs": {
-    "url": "https://github.com/sugenthar/yaazhiCode/issues"
+    "url": "https://github.com/sugenthar/yaazhicode-mcp/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.2",
