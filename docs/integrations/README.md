@@ -9,7 +9,7 @@ MCP client support changes frequently. Verify the exact configuration schema for
   "mcpServers": {
     "yaazhicode": {
       "command": "node",
-      "args": ["D:\\YaazhiCode\\YaazhiCode MCP\\dist\\transports\\cli.js", "--stdio"]
+      "args": ["<absolute path to repository>/dist/transports/cli.js", "--stdio"]
     }
   }
 }

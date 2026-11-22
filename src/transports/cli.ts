@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { loadConfig, type ServerConfig } from '../security/config.js';
 import { logger } from '../shared/logger.js';
 import { MCP_NAME, MCP_VERSION, LANGUAGE_VERSION } from '../shared/version.js';

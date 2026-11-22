@@ -30,6 +30,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "node --import tsx --test \"tests/unit/*.test.ts\"",

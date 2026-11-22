@@ -2,7 +2,7 @@
 
 All notable changes to `@yaazhicode/mcp` are documented here.
 
-## 0.1.0 (unreleased, local only)
+## 0.1.0 (initial release)
 
 ### Added
 
@@ -17,4 +17,4 @@ All notable changes to `@yaazhicode/mcp` are documented here.
 ### Explicitly not included
 
 - `run_yaazhicode_code` and any other execution capability.
-- Any deployment, hosting account, domain, or npm publication.
+- Remote hosting, deployment accounts, and custom domains; these are separate from npm distribution.

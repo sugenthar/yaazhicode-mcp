@@ -5,7 +5,8 @@
 Requirements: Node.js `>=22.18.0` and npm.
 
 ```powershell
-cd "D:\YaazhiCode\YaazhiCode MCP"
+git clone https://github.com/sugenthar/yaazhicode-mcp.git
+cd yaazhicode-mcp
 npm install
 npm run build
 npm run start:stdio
@@ -26,7 +27,7 @@ Claude Desktop / Cline / Windsurf style configuration (verify the exact field na
   "mcpServers": {
     "yaazhicode": {
       "command": "node",
-      "args": ["D:\\YaazhiCode\\YaazhiCode MCP\\dist\\transports\\cli.js", "--stdio"],
+      "args": ["<absolute path to repository>/dist/transports/cli.js", "--stdio"],
       "env": {
         "YAAZHICODE_MCP_LOG_LEVEL": "error"
       }

@@ -4,12 +4,14 @@ The public AI documents (`llms.txt`, `llms-full.txt`, `yaazhicode-spec.json`, an
 
 ## Authoritative sources
 
-- `D:/YaazhiCode/YaazhiCode/SPECIFICATION.md`
-- `D:/YaazhiCode/YaazhiCode/docs/KEYWORDS.md`
-- `D:/YaazhiCode/YaazhiCode/src/lexer/keywords.ts` (via the installed package registry)
-- `D:/YaazhiCode/YaazhiCode/docs/STANDARD_LIBRARY.md`, `BUILTIN_MODULES.md`, `LIMITATIONS.md`, `MODULES.md`, `NUMERALS.md`, `CLI.md`
+Paths below assume the sibling checkout layout (`YaazhiCode/`, `Web/`, and this repository side by side) used by `scripts/sync-knowledge.mjs`. The running server never reads them.
+
+- `../YaazhiCode/SPECIFICATION.md`
+- `../YaazhiCode/docs/KEYWORDS.md`
+- `../YaazhiCode/src/lexer/keywords.ts` (via the installed package registry)
+- `../YaazhiCode/docs/STANDARD_LIBRARY.md`, `BUILTIN_MODULES.md`, `LIMITATIONS.md`, `MODULES.md`, `NUMERALS.md`, `CLI.md`
 - `yaazhicode api --json` from `yaazhicode@0.1.0`
-- `D:/YaazhiCode/Web/src/content/languageData.js` and `examplesData.js` (current website source content)
+- `../Web/src/content/languageData.js` and `examplesData.js` (current website source content)
 
 ## Generated files
 
